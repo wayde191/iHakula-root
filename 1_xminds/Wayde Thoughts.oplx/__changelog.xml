@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<changelog xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2">
+  <version>2.0</version>
+  <task-change-set user="Wayde Sun" date="2013-10-10T07:37:41.976Z" timestamp="2013-10-10T07:37:41.976Z">
+    <change idref="t2" to="t-1" to-position="1" resolved="yes">
+      <change idref="t2" attribute="title" type="string" to="得用碎片时间学习新知识"/>
+    </change>
+    <change idref="t3" to="t-1" to-position="2" resolved="yes">
+      <change idref="t3" attribute="title" type="string" to="用c语言实现json"/>
+    </change>
+    <change idref="t4" to="t-1" to-position="3" resolved="yes">
+      <change idref="t4" attribute="title" type="string" to="用vim开发"/>
+    </change>
+    <change idref="t5" to="t-1" to-position="4" resolved="yes">
+      <change idref="t5" attribute="title" type="string" to="打成静态包"/>
+    </change>
+    <change idref="t6" to="t-1" to-position="5" resolved="yes">
+      <change idref="t6" attribute="title" type="string" to="测试效率"/>
+    </change>
+    <change idref="t7" to="t-1" to-position="6" resolved="yes">
+      <change idref="t7" attribute="title" type="string" to="socket实现多人语音"/>
+    </change>
+    <change idref="t8" to="t-1" to-position="7" resolved="yes">
+      <change idref="t8" attribute="title" type="string" to="socket实现对战游戏"/>
+    </change>
+    <change idref="t9" to="t-1" to-position="8" resolved="yes">
+      <change idref="t9" attribute="title" type="string" to="ios信息安全"/>
+    </change>
+    <change idref="t10" to="t-1" to-position="9" resolved="yes">
+      <change idref="t10" attribute="title" type="string" to="python总结以上实现"/>
+    </change>
+    <change idref="t11" to="t-1" to-position="10" resolved="yes">
+      <change idref="t11" attribute="title" type="string" to="出视频用来检验自己的总结"/>
+    </change>
+    <change idref="t12" to="t-1" to-position="11" resolved="yes">
+      <change idref="t12" attribute="title" type="string" to="写系列文章来检验自己的总结"/>
+    </change>
+    <change idref="t13" to="t-1" to-position="12" resolved="yes">
+      <change idref="t13" attribute="title" type="string" to="unix知识补充"/>
+    </change>
+    <change idref="t1" attribute="title" type="string" from="Task 1" to="利用碎片时间学习专业知识" resolved="yes"/>
+  </task-change-set>
+  <resource-change-set user="Wayde Sun" date="2013-10-10T07:37:41.975Z" timestamp="2013-10-10T07:37:41.975Z">
+    <change idref="r1" from="r-1" from-position="0" resolved="yes">
+      <change idref="r1" attribute="name" type="string" to="Resource 1"/>
+    </change>
+    <change idref="r2" to="r-1" to-position="0" resolved="yes">
+      <change idref="r2" attribute="name" type="string" to="孙伟"/>
+    </change>
+  </resource-change-set>
+  <metadata-change-set user="Wayde Sun" date="2013-10-10T07:33:21.365Z" timestamp="2013-10-10T07:33:21.365Z">
+    <change idref="m1" attribute="fixedDate" type="date" to="2013-10-10T00:00:00.000Z" resolved="yes"/>
+  </metadata-change-set>
+</changelog>
