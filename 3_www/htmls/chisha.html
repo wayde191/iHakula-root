@@ -1,0 +1,27 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+	<title>大富翁随机数</title>
+</head>
+<body>
+<script>
+
+var resturants = ["炒菜", "七号面馆", "蓉李记", "五谷鱼粉", "麦当劳", "沙县小吃", "印象橱窗", "泰国菜"];
+
+var random = function(){
+	var rV = Math.random() * 1000;
+	var intV = parseInt(rV);
+	var value = intV % resturants.length + 1;
+	var ele = document.getElementById("value");
+	ele.innerHTML = value;
+	document.getElementById("data").innerHTML = intV;
+	document.getElementById("resturant").innerHTML = resturants[value - 1];
+}
+</script>
+	<button onclick="random()" style="width:200px; height:40px; margin: 10px;">Random</button>
+	<div id="resturant" style="color:white; height:200px; width:100%; background-color:blue; text-align:center; font-size:100px;">请选择</div>
+	<div id="value" style="height:100px; width:100%; background-color:green; text-align:center; font-size:100px;">0</div>
+	<div id="data" style="height:100px; width:100%; background-color:yellow; text-align:center; font-size:100px;">0</div>
+</body>
+</html>

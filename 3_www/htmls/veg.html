@@ -1,0 +1,23 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+	<title>素食主义</title>
+</head>
+<body>
+<script>
+var random = function(){
+	var rV = Math.random() * 1000;
+	var intV = parseInt(rV);
+	var value = intV % 12 + 1;
+	var ele = document.getElementById("value");
+	ele.innerHTML = value;
+	document.getElementById("data").innerHTML = intV;
+}
+</script>
+	<div id="value" style="height:800px; width:100%; background-color:green; text-align:center; font-size:60px;">
+		<h2>素食主义</h2>
+		<h3>不加肉</h3>
+		<h4>Vegetarian</h4>
+	</div>
+</body>
+</html>

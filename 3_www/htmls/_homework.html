@@ -1,0 +1,121 @@
+<html>
+<head><meta charset="utf-8"></head>
+
+<style>
+#contents {
+  width: 300px;
+  background-color: red;
+  float:left;
+}
+
+#result {
+  width: 300px;
+  background-color: yellow;
+  float: left;
+}
+
+#code {
+  width: 700px;
+  background-color: orange;
+  float: left;
+}
+
+</style>
+
+<h1>
+  说明：生成100个元素，从中过滤出含有‘1’的对象。
+  <pre>
+    var filtedResults = filter(contents, function(object){
+     return object.indexOf('1') > -1;
+     });
+  </pre>
+</h1>
+<div id='contents'></div>
+<div id='result'>hello</div>
+<div id='code'>
+<h2>
+代码块：  
+<pre>
+var contents = [];
+var contentsHtml = '';
+
+function initContents(){
+  for(var i = 0; i < 100; i++){
+    var obj = 'Obj:' + i;
+    contents.push(obj);
+    contentsHtml += 'tag p' + obj + 'tag p'
+  }
+}
+initContents();
+
+var eleP = document.getElementById('contents');
+eleP.innerHTML = contentsHtml;
+
+function filter(elements, filterRuleFunc){
+  var res = [];
+  for(var i = 0; i < elements.length; i++){
+    var ele = elements[i];
+    if(filterRuleFunc(ele)){
+      res.push(ele);
+    }
+  }
+ return res;
+}
+
+var filtedResults = filter(contents, function(object){
+  return object.indexOf('1') > -1;
+});
+
+var resultHtml = '';
+for (var i = 0; i < filtedResults.length; i++){
+  resultHtml += 'tag p' + filtedResults[i] + 'tag p';
+}
+var eleResult = document.getElementById('result');
+eleResult.innerHTML = resultHtml;
+
+  </pre>
+</h2>
+</div>
+
+<script>
+var contents = [];
+var contentsHtml = '';
+
+function initContents(){
+  for(var i = 0; i < 100; i++){
+    var obj = 'Obj:' + i;
+    contents.push(obj);
+    contentsHtml += '<p>' + obj + '</p>'
+  }
+}
+initContents();
+
+var eleP = document.getElementById('contents');
+eleP.innerHTML = contentsHtml;
+
+function filter(elements, filterRuleFunc){
+  var res = [];
+  for(var i = 0; i < elements.length; i++){
+    var ele = elements[i];
+    if(filterRuleFunc(ele)){
+      res.push(ele);
+    }
+  }
+ return res;
+}
+
+var filtedResults = filter(contents, function(object){
+  return object.indexOf('1') > -1;
+});
+
+var resultHtml = '';
+for (var i = 0; i < filtedResults.length; i++){
+  resultHtml += '<p>' + filtedResults[i] + '</p>';
+}
+var eleResult = document.getElementById('result');
+eleResult.innerHTML = resultHtml;
+
+</script>
+
+
+</html>
