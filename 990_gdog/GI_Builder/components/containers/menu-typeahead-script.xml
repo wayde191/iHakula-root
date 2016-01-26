@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  ~ Copyright (c) 2001-2009, TIBCO Software Inc.
+  ~ Use, modification, and distribution subject to terms of license.
+  --><serialization xmlns="urn:tibco.com/v3.0">
+  <object type="jsx3.gui.Menu">
+    <dynamics jsxxmlurl="mnuTypeAheadScript"/>
+    <strings jsxdisplay="none" jsxname="jsxmenu_typeaheadscript"/>
+    <events jsxexecute="jsx3.ide.doInsertCode(objRECORD,this.getContextParent(),&quot;script&quot;);"/>
+        <!--jsxspy="jsx3.ide.scriptTypeAheadSpy(this,strRECORDID);"/>-->
+    <xslparameters jsxdisableescape="yes" jsxsortpath="jsxtext" jsxsorttype="text"/>
+  </object>
+</serialization>

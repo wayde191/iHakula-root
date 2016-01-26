@@ -1,0 +1,49 @@
+<transform xmlns="http://gi.tibco.com/transform/" xmlns:u="http://gi.tibco.com/transform/user" version="1.0">
+
+  <model>
+    <var id="headlogo">return this.resolveURI(this.getLogoImage())</var>
+	<var id="HeadBar">return "url(" + this.resolveURI(tibco.gdog.GDog.HeadBar) + ")";</var>
+	<var id="ContentBackgroundImage">return "url(" + this.resolveURI(tibco.gdog.GDog.ContentBackgroundImage) + ")";</var>
+	<var id="ContentDashLine">return "url(" + this.resolveURI(tibco.gdog.GDog.ContentDashLine) + ")";</var>
+	<var id="ContentBtnRun">return this.resolveURI(tibco.gdog.GDog.ContentBtnRun);</var>
+  </model>
+ 
+  <template>
+  
+    <div style=" height:100%; width:100%; padding:20px;" align="center">
+	  <div style="height:270px; width:520px; border:1px solid #338BDA;">
+	    <!-- Header -->
+		<div style="width:100%; height:38px; background-image:{HeadBar}; background-repeat:repeat-x;" align="left">
+		  <img src="{headlogo}" />
+		</div>
+	    <!-- Content -->
+		<div style="width:100%; height:100%-38px; background-image:{ContentBackgroundImage}; background-repeat:repeat-x;">
+		  <div style="width:343px; height:268px; float:left;">
+		    <div style="width:283px; height:110px;">
+			  <div style="width:283px; height:68px;"></div>
+			  <input type="text" name="gdogTestConfigure" style="height:30px; width:100%;"/>
+			</div>
+			<div style="width:283px; height:138px; padding:8 10px; color:#666666; font-size:12px;">
+			  <div style="height:10px; width:180px;" align="left">
+			    <div style="width:50px; float:left;"><text>Runs</text></div><span style="float:left;"><text>:</text></span>
+			  </div>
+			  <div style="width:100%; height:8px;"></div>
+			  <div style="height:10px; width:180px;" align="left">
+			    <div style="width:50px; float:left;"><text>Errors</text></div><span style="float:left;"><text>:</text></span>
+			  </div>
+			  <div style="width:100%; height:8px;"></div>
+			  <div style="height:10px; width:180px;" align="left">
+			    <div style="width:50px; float:left;"><text>Faulures</text></div><span style="float:left;"><text>:</text></span>
+			  </div>
+			  <div style="width:100%; height:25px;"></div>
+			  <div style="height:17px; width:80px; float:right;"><input type="image" src="{ContentBtnRun}" onclick="{onclick}"/></div>
+			</div>
+		  </div>
+		  <div style="width:7px; height:230px; float:left; background-image:{ContentDashLine}; background-repeat:repeat-y"></div>
+		  <div style="width:126px; height:268px; float:left;"></div>
+		</div>
+	  </div>
+	</div>
+	
+  </template>
+</transform>

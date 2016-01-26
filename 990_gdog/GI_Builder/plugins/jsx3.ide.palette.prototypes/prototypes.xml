@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  ~ Copyright (c) 2001-2009, TIBCO Software Inc.
+  ~ Use, modification, and distribution subject to terms of license.
+  --><serialization xmlns="urn:tibco.com/v3.0">
+  <onAfterDeserialize><![CDATA[objJSX._firsttime=false;objJSX.onPaletteLoaded=function(){var
+ub={a:"/",b:"ctxmenu",c:"ctxmenu-item",d:"utils",e:"additions",f:"toolbar"};this.onEditorChanged(jsx3.ide.getActiveEditor(),null);var
+Ja=new
+jsx3.amp.util.MenuManager();Ja.addMenuBar(ub.a,menuBar);(((this.getPlugIn()).getExtPoint(ub.b)).processExts()).each(function(e){Ja.addMenu(e);});(((this.getPlugIn()).getExtPoint(ub.c)).processExts()).each(function(j){Ja.addItem(j);});Ja.finishInit();var
+Ha=new
+jsx3.amp.util.ToolbarManager(jsx_ide_complibs_bar);Ha.addSection(ub.d);Ha.addSection(ub.e,true);(((this.getPlugIn()).getExtPoint(ub.f)).processExts()).each(function(k){Ha.addItem(k);});};objJSX.onPrototypesReloaded=function(){ide_component_libs_tree.repaint();};objJSX.onEditorChanged=function(e,g){var
+Xa=g&&g.getMode()=="component";var
+Fa=e&&e.getMode()=="component";if(Xa!=Fa)jsx3.sleep((jsx3.$F(this._onEditorChangedSleep)).bind(this,[Fa]),"jsx3.ide.palette.componentlibs",this,true);};objJSX._onEditorChangedSleep=function(n){if(n){if(!objJSX._firsttime){objJSX._firsttime=true;var
+pb=this.getPlugIn();jsx3.ide._addJob((jsx3.$F(pb.reloadPrototypeLibraries)).bind(pb,[ide_component_libs_tree]));}ide_component_libs_tree.setDisplay(jsx3.gui.Block.DISPLAYBLOCK,true);this._setButtonsEnabled(jsx3.gui.Form.STATEENABLED);}else{ide_component_libs_tree.setDisplay(jsx3.gui.Block.DISPLAYNONE,true);this._setButtonsEnabled(jsx3.gui.Form.STATEDISABLED);}};objJSX._setButtonsEnabled=function(p){var
+Fb=jsx_ide_complibs_bar.getDescendantsOfType(jsx3.gui.ToolbarButton);for(var
+Aa=0;Aa<Fb.length;Aa++)Fb[Aa].setEnabled(p,true);};objJSX._onChange=function(i){(this.getPlugIn()).publish({subject:"selection",value:i});};objJSX.getTree=function(){return ide_component_libs_tree;};]]></onAfterDeserialize>
+    <object type="jsx3.gui.Block">
+      <dynamics/>
+      <variants jsxleft="0" jsxoverflow="2" jsxtop="0"/>
+      <strings jsxheight="100%" jsxhelpid="ide.palette.complibs" jsxname="jsx_ide_palette_complibs" jsxwidth="100%"/>
+        <object type="jsx3.gui.Block">
+          <strings jsxdisplay="none" jsxname="menuBar"/>
+        </object>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxoverflow="2" jsxrelativeposition="0"/>
+          <strings jsxheight="100%" jsxname="jsx_ide_cache_layout" jsxrows="26,*" jsxwidth="100%"/>
+          <events/>
+          <properties/>
+            <object type="jsx3.gui.WindowBar">
+              <dynamics jsxbgcolor="@Solid Medium" jsxborder="@Outset"/>
+              <variants jsxbartype="2" jsxfontsize="10" jsxoverflow="3" jsxrelativeposition="1"/>
+              <strings jsxname="jsx_ide_complibs_bar"/>
+            </object>
+            <object type="jsx3.gui.Block">
+              <dynamics jsxbgcolor="@Solid Light" jsxborder="@Outset"/>
+              <variants jsxleft="0" jsxoverflow="1" jsxtop="0"/>
+              <strings jsxheight="100%" jsxname="jsx_ide_comps_treeblock" jsxwidth="100%"/>
+                <object type="jsx3.gui.Tree">
+                  <dynamics jsxbgcolor="@Solid Light" jsxpadding="@Tree Padding"/>
+                  <variants jsxdrag="1" jsxuseroot="0"/>
+                  <strings jsxdisplay="none" jsxheight="100%" jsxmenu="jsx3.ide.prototypesctx" jsxname="ide_component_libs_tree" jsxwidth="100%"/>
+                  <events jsxadopt="false;" jsxchange="jsx_ide_palette_complibs._onChange(this.getValue());" jsxdata="(jsx_ide_palette_complibs.getPlugIn()).doPLDirData(this,objNODE);" jsxdrag="if(objHW=jsx3.gui.Heavyweight.GO(&quot;jsxfocusrectangle&quot;))objHW.destroy();"/>
+                  <xslparameters jsx_img_resolve="0" jsxindent="16" jsxsortpath="sorton"/>
+                </object>
+            </object>
+        </object>
+    </object>
+</serialization>

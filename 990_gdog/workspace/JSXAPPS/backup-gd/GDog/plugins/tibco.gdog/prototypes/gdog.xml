@@ -1,0 +1,11 @@
+<serialization xmlns="urn:tibco.com/v3.0" jsxversion="3.7">
+  <name>gDog</name>
+  <icon/>
+  <description> A unit test tool for GI AMP</description>
+  <onBeforeDeserialize/>
+  <onAfterDeserialize/>
+  <object type='tibco.gdog.GDog'>
+    <variants jsxindex='0'/>
+	<strings jsxname='gDog'/>
+  </object>
+</serialization>

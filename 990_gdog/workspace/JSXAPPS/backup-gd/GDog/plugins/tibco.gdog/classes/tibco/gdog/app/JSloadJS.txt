@@ -1,0 +1,26 @@
+function _loadJsUnitCore() {
+			var scriptNode = document.createElement("script");
+			scriptNode.setAttribute("src", "/jsunit/app/jsUnitCore.js");
+			scriptNode.setAttribute("type", "text/javascript");
+			document.documentElement.firstChild.appendChild(scriptNode);
+		};
+		
+		function loadJsUnitCore() {
+			if(cc.ready) {
+				_loadJsUnitCore();
+				func();
+			} else {
+				setTimeout(loadJsUnitCore, 0);
+			};
+		};
+		
+		loadJsUnitCore();
+		
+		var func = function() {
+			if(this.assertTrue && UTIL_READY) {
+				isTestPageLoaded = true;
+			} else {
+				setTimeout(func, 0);
+			};
+		};
+		func();

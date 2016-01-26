@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data jsxid="jsxroot">
+  <record jsxid="prefs" type="map">
+    <record jsxid="dom" type="map">
+      <record jsxid="showFocus" type="boolean">false</record>
+      <record jsxid="snapTo" type="boolean">true</record>
+    </record>
+    <record jsxid="builder" type="map">
+      <record jsxid="cachewarn" type="boolean">false</record>
+      <record jsxid="dereferencewarn" type="boolean">false</record>
+      <record jsxid="domfocus" type="boolean">true</record>
+      <record jsxid="snapto" type="string">10</record>
+      <record jsxid="domdeletewarn" type="boolean">false</record>
+      <record jsxid="welcome_v" type="map">
+        <record jsxid="3.8.0_399db" type="boolean">false</record>
+        <record jsxid="3.8.0" type="boolean">false</record>
+      </record>
+    </record>
+    <record jsxid="versioncheck" type="map">
+      <record jsxid="ignore" type="string">3.9.0_813</record>
+    </record>
+  </record>
+  <record jsxid="window" type="map">
+    <record jsxid="splitters" type="map">
+      <record jsxid="jsx_ide_splitter1" type="string">90.98786828422877%</record>
+      <record jsxid="jsx_ide_splitter2" type="string">20%</record>
+      <record jsxid="jsx_ide_splitter3" type="string">50%</record>
+      <record jsxid="jsx_ide_splitter4" type="string">75%</record>
+      <record jsxid="jsx_ide_splitter5" type="string">50%</record>
+    </record>
+  </record>
+  <record jsxid="lastProject" type="string">JSXAPPS/GDOGPOC/</record>
+  <record jsxid="recentProjects" type="array">
+    <record jsxid="0" type="string">JSXAPPS/GDOGPOC</record>
+  </record>
+  <record jsxid="palettes" type="map">
+    <record jsxid="jsx3.ide.editor.component.dom.palette" type="map"/>
+    <record jsxid="jsx3.ide.editor.component.attr.palette" type="map"/>
+    <record jsxid="jsx3.ide.palette.properties.props.palette" type="map"/>
+    <record jsxid="jsx3.ide.palette.events.events.palette" type="map"/>
+    <record jsxid="jsx3.ide.palette.xslparams.xsl.palette" type="map"/>
+    <record jsxid="jsx3.ide.palette.prototypes.complibs.palette" type="map"/>
+    <record jsxid="jsx3.ide.palette.cache.cache.palette" type="map"/>
+    <record jsxid="jsx3.ide.palette.resources.proj.palette" type="map"/>
+    <record jsxid="jsx3.ide.jabber.xmpp.palette" type="map"/>
+  </record>
+  <record jsxid="projects" type="map">
+    <record jsxid="JSXAPPS/GDOGPOC" type="map">
+      <record jsxid="recentFiles" type="array">
+        <record jsxid="0" type="string">plugins/main/layout.xml</record>
+      </record>
+      <record jsxid="openFiles" type="array"/>
+    </record>
+  </record>
+  <record jsxid="scriptlet" type="map">
+    <record jsxid="history" type="array">
+      <record jsxid="0" type="string">var errormap = {'en-GB' : {}};
+errormap</record>
+      <record jsxid="1" type="string">var errormap = {'en-GB' : {}};
+errormap</record>
+      <record jsxid="2" type="string">var errormap = {'en-GB' : {417 : ''}};
+errormap</record>
+      <record jsxid="3" type="string">var errormap = {'en-GB' : {417 : ''}};
+errormap</record>
+      <record jsxid="4" type="string">var errormap = {'en-GB' : {417 : ''}};
+errormap</record>
+      <record jsxid="5" type="string">var errormap = {'en-GB' : {417 : ''}};
+errormap.en-GB</record>
+      <record jsxid="6" type="string">var errormap = {'en-GB' : {417 : ''}};
+errormap[en-GB]</record>
+      <record jsxid="7" type="string">var errormap = {'en-GB' : {417 : ''}};
+errormap['en-GB']</record>
+      <record jsxid="8" type="string">var errormap = {'en-GB' : {417 : ''}};
+errormap['en-GB']417[]</record>
+      <record jsxid="9" type="string">var errormap = {'en-GB' : {417 : ''}};
+errormap['en-GB'][417]</record>
+      <record jsxid="10" type="string">var errormap = {'en-GB' : {417 : 'sss'}};
+errormap['en-GB'][417]</record>
+      <record jsxid="11" type="string">var errormap = {'en-GB' : {'417' : 'sss'}};
+errormap['en-GB'][417]</record>
+      <record jsxid="12" type="string">var errormap = {'en-GB' : {'417' : 'sss'}};
+errormap['en-GB'][417]</record>
+      <record jsxid="13" type="string">var errormap = {'en-GB' : {'417' : 'sss'}};
+errormap['en-GB'][417]</record>
+      <record jsxid="14" type="string">pfsite = {};
+pfsite.LANG = "en-GB";
+pfsite.errormap = {
+  'en-GB' : {
+    //User.login
+    '417' : 'The provided user, {0}, and password combination do not match any existing accounts.',
+    //User.logout
+    //User.register
+    '411' : 'The user name, {0}, is unavailable.',
+    '412' : 'The email, {0}, cannot be used for your account, because it has already been confirmed by another user.',
+    '413' : 'The response to the registration challenge question is incorrect.',
+    //User.exists
+    '414' : 'The user name, {0}, does not exist.',
+    //User.resetPassword
+    '416' : 'A password reset email could not be sent to.',
+    //User.resetPasswordConfirmation
+    '419' : 'The end user account being targeted does not exist. This happens when the user account is deleted or suspended or if a confirmed email has been removed that was once used to identify this user.',
+    '420' : 'The confirmation key and email provided do not match any existing accounts awaiting password reset. The password was not reset.',
+    '421' : 'No confirmation key was provided. The password was not reset for the account.',
+    //User.registerEmailConfirmation
+    '406' : 'Could not confirm the account, using the provided email, password, and confirmation key.',
+    //User.reregisterEmail
+    '410' : 'The email, {0}, could not be found in the list of unconfirmed emails for this account.',
+    //User.registerEmail
+    '404' : 'The email, {0}, cannot be used for this account, because it has already been confirmed by another user.',
+    //User.update
+    //User.listEmails
+    //User.whoAmI
+    //User.removeConfirmedEmail
+    '409' : 'The email, {0}, could not be found in the list of confirmed emails for this account.',
+    '402' : 'The email, {0}, is primary and may not be unregistered.',
+    //User.removeUnconfirmedEmail
+    '403' : 'The email, {0}, could not be found in the list of unconfirmed emails for this account.',
+    //User.promoteEmail
+    '401' : 'The provided email, {0}, does not exist.',
+    '422' : 'The email, {0}, may not be promoted, because it is already the primary email.',
+    '901' : 'The server experienced an internal error and could not complete the request. Description: {0}',
+    '902' : 'The user must be logged in to perform this action.',
+    '903' : 'The operation could not be completed, because one or more input fields were invalid or missing.  Description: {0}'
+  }
+};
+pfsite.errormap[pfsite.LANG]['401']</record>
+    </record>
+  </record>
+  <record jsxid="apihelp" type="map">
+    <record jsxid="aswindow" type="boolean">false</record>
+    <record jsxid="class" type="string">jsx3.DOM</record>
+    <record jsxid="member" type="string">_summary</record>
+  </record>
+</data>

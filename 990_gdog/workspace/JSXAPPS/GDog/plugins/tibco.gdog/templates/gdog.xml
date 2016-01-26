@@ -1,0 +1,82 @@
+<transform xmlns="http://gi.tibco.com/transform/" xmlns:u="http://gi.tibco.com/transform/user" version="1.0">
+
+  <model>
+    <var id="headlogo">return this.resolveURI(this.getLogoImage())</var>
+	<var id="HeadBar">return "url(" + this.resolveURI(tibco.gdog.GDog.HeadBar) + ")";</var>
+	<var id="ContentBackgroundImage">return "url(" + this.resolveURI(tibco.gdog.GDog.ContentBackgroundImage) + ")";</var>
+	<var id="ContentDashLine">return "url(" + this.resolveURI(tibco.gdog.GDog.ContentDashLine) + ")";</var>
+	<var id="ContentBtnRun">return this.resolveURI(tibco.gdog.GDog.ContentBtnRun);</var>
+  <var id="DebuggerBtn">return this.resolveURI(tibco.gdog.GDog.DebuggerBtn);</var>
+	<var id="ProgressBar">return this.resolveURI(tibco.gdog.GDog.ProgressBar);</var>
+  </model>
+ 
+  <template>
+  
+    <div style=" height:100%; width:100%; padding:20px;" align="center">
+	  <div style="height:270px; width:520px; border:1px solid #338BDA;">
+	    <!-- Header -->
+		<div style="width:100%; height:38px; background-image:{HeadBar}; background-repeat:repeat-x;" align="left">
+		  <img src="{headlogo}" />
+		</div>
+	    <!-- Content -->
+		<div style="width:100%; height:100%-38px; background-image:{ContentBackgroundImage}; background-repeat:repeat-x;">
+		  <div style="width:343px; height:268px; float:left;">
+		    <div style="width:283px; height:110px;">
+			  <div style="width:283px; height:38px;"></div>
+			  <div u:id="gdogStatus" style="height:30px; width:100%; color:#338BDA;" align="left"></div>
+			  <div style="height:30px; width:100%; border:1px solid #338BDA;" align="left">
+			    <img u:id="gdogProgress" name="progress" height="28" width="0" alt="progress image" src="{ProgressBar}"/>
+			  </div>
+			</div>
+			<div style="width:283px; height:138px; padding:8 10px; color:#666666; font-size:12px;">
+			  <div style="height:10px; width:180px;" align="left">
+			    <div style="width:50px; float:left;"><text>Runs</text></div>
+				<span style="float:left;"><text>:</text></span>
+				<div style="float:left; width:50px;">
+				  <span u:id="totalCount" style="float:right;"></span>
+				</div>
+			  </div>
+			  <div style="width:100%; height:8px;"></div>
+			  <div style="height:10px; width:180px;" align="left">
+			    <div style="width:50px; float:left;"><text>Errors</text></div>
+				<span style="float:left;"><text>:</text></span>
+				<span style="float:left; width:8px;"></span>
+				<div style="float:left; width:50px;">
+				  <span u:id="errorCount" style="float:right;"></span>
+				</div>
+			  </div>
+			  <div style="width:100%; height:8px;"></div>
+			  <div style="height:10px; width:180px;" align="left">
+			    <div style="width:50px; float:left;"><text>Failures</text></div>
+				<span style="float:left;"><text>:</text></span>
+				<div style="float:left; width:50px;">
+				  <span u:id="failureCount" style="float:right;"></span>
+				</div>
+			  </div>
+			  <div style="width:100%; height:25px;"></div>
+			  <div style="height:17px; width:80px; float:right;">
+          <input u:id="gdogRunButton" type="image" src="{ContentBtnRun}" onclick="{onclick}"/>
+        </div>
+			</div>
+		  </div>
+		  <div style="width:7px; height:230px; float:left; background-image:{ContentDashLine}; background-repeat:repeat-y"></div>
+		  <div style="width:166px; height:268px; float:left;">
+        <div style="width:100%; height:20px;"></div>
+        <div style="width:90%; height: 40px; float:left" align="right">
+          <input u:id="gdogDebugBtn" type="image" src="{DebuggerBtn}" onclick="{onDebugger}"/>
+        </div>
+        <div style="width:100%; height:15px; clear:both; color:#ff6633; font-size: 11px;" align="left">
+          <text>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Errors and Faliures : </text>
+        </div>
+        <div style="width:100%; height: 160px; color:#666666; font-size: 11px;" align="center">
+          <select u:id="gdogProblemsList" style="width:135px;" size="9" ondblclick="{showMessageForSelectedProblemTest}">
+             <option></option>
+          </select>
+        </div>
+      </div>
+		</div>
+	  </div>
+	</div>
+	
+  </template>
+</transform>

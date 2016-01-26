@@ -1,0 +1,1 @@
+tibco.gdog.registerApp(GDOGPOC, '../GDog/');

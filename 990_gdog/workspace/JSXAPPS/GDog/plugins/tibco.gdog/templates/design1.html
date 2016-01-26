@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+
+<body>
+  <div style="position:{$position};left:{$left};top:{$top};width:{$width};height:{$height};margin:{$margin}; ">
+            <var name="POIDisplay" triggers="poidisplay">this.getDisplayPoi()</var>
+            <var name="POIVisibility" triggers="poivisibility">this.getVisibilityPoi()</var>
+            <div style=" width:100%; height:100%;  ">
+                <div style="width:100%; height:100%; ">
+                    <div style="width:100%; height:{headbarHeight}; background-image:{HeadBar}; background-repeat:repeat-x;  border:1px solid #338BDA; ">
+                        <div style=" height:100%; float:left;     ">
+                            <img src="{headlogo}" style="position:absolute; "></img>
+                        </div>
+                        <div style=" height:100%; float:right;   ">
+                            <div id="tibco.uxcore.gui.desktop.linkButtonArea"
+                                 style="height:100%;padding:10px 20px 0px 20px;float:right; background-image:{HeadAdminBG}; background-repeat:repeat; border\-left: 1px solid #338BDA;">
+                                <span u:id="poi" title="{POIToolTip}"  style="position: relative;display:{POIDisplay};visibility:{POIVisibility}; margin: -5 0 0 0;cursor: pointer">
+                                    <span style=" height:100%;width:100%; margin: 0 3 0 0; ">
+                                        <img src="{POIIcon}" style="vertical-align:middle"></img>
+                                    </span>
+                                    <span u:id="poitext" style="position: relative; font-size: 10px; color: #BDEDEA;font-family: Arial; text-decoration:none; margin:0 10 0 0;  ">
+                                        <text>{POIText}</text>
+                                    </span>
+                                </span>
+                                <attach select="this.applicationHookIterator()">
+                                    <drawspace boxtype="'box'" position="'relative'" top="0" left="0"/>
+                                </attach>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="left:0px;top:0px;width:100%; height:100%-40px;  ">
+                        <attach select="this.NavBarIterator()">
+                            <drawspace boxtype="'box'" position="'relative'" top="0" left="0"/>
+                        </attach>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

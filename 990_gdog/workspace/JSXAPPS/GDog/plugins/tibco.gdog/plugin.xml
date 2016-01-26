@@ -1,0 +1,18 @@
+<plugin xmlns="http://www.tibco.com/gi/amp"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.tibco.com/gi/amp http://gi.tibco.com/xsd/plugin.xsd"
+        id="tibco.gdog"
+        name="GDog"
+        version="0.1">
+
+  <requires>
+  </requires>
+
+  <resources>
+    <script id="System_js" path="classes/tibco/gdog/System.js" eval="true"/>
+	<script id="GDog_js" path="classes/tibco/gdog/GDog.js" eval="true">
+	  <prereq id="System_js"/>
+	</script>
+  </resources>
+
+</plugin>
